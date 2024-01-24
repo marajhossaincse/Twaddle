@@ -11,44 +11,42 @@ struct HomeScreen: View {
     @StateObject var viewmodel = UserViewModel()
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 0) {
-                    ForEach(viewmodel.users) { user in
-                        NavigationLink(destination: {
-                            UserDetailScreen()
+        List(viewmodel.users) { user in
+            NavigationLink(destination: {
+                UserDetailScreen()
+            }, label: {
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack(spacing: 0) {
+                        ZStack(alignment: .leading) {
+                            Image(systemName: "person.crop.circle")
+                                .resizable()
+                                .frame(width: 45, height: 45)
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.white)
 
-                        }, label: {
-                            VStack(spacing: 0) {
-                                HStack(spacing: 0) {
-                                    ZStack {
-                                        Circle()
-                                            .stroke(user.getStatusColor(), lineWidth: 3)
-                                            .frame(height: 70)
+                            Circle()
+                                .stroke(user.getStatusColor(), lineWidth: 2)
+                                .frame(width: 45, height: 45)
+                        }
 
-                                        Image(systemName: "person.crop.circle")
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                            .foregroundColor(.white)
-                                    }
-                                    .padding()
+                        VStack {
+                            Text(user.getName())
 
-                                    Text(user.getName())
-                                }
-                            }
-                            .frame(maxWidth: .infinity)
-                        })
+                            Text(user.getStatus())
+                        }
                     }
+                    .frame(maxWidth: .infinity)
                 }
-            }
-            .toolbar {
-                Button {} label: {
-                    Text("Functionality")
-                }
-            }
-            .navigationTitle("Home")
-            .navigationBarTitleDisplayMode(.inline)
+                .frame(maxWidth: .infinity)
+            })
         }
+        .toolbar {
+            Button {} label: {
+                Text("Functionality")
+            }
+        }
+        .navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewmodel.fetch()
         }
