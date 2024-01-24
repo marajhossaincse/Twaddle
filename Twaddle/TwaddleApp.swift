@@ -19,8 +19,10 @@ import SwiftUI
 struct TwaddleApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            HomeScreen()
+            NavigationView {
+//                ContentView()
+                HomeScreen()
+            }
         }
     }
 }

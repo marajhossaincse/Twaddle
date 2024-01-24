@@ -19,15 +19,24 @@ struct HomeScreen: View {
                             UserDetailScreen()
 
                         }, label: {
-                            UserCard(
-                                name: user.getName(),
-                                email: user.getEmail(),
-                                gender: user.getGender(),
-                                status: user.getStatus(),
-                                statusColor: user.getStatusColor()
-                            )
-                            .padding(.vertical, 7)
-                            .padding(.horizontal, 7)
+                            VStack(spacing: 0) {
+                                HStack(spacing: 0) {
+                                    ZStack {
+                                        Circle()
+                                            .stroke(user.getStatusColor(), lineWidth: 3)
+                                            .frame(height: 70)
+
+                                        Image(systemName: "person.crop.circle")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                            .foregroundColor(.white)
+                                    }
+                                    .padding()
+
+                                    Text(user.getName())
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
                         })
                     }
                 }
@@ -36,7 +45,6 @@ struct HomeScreen: View {
                 Button {} label: {
                     Text("Functionality")
                 }
-                
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)

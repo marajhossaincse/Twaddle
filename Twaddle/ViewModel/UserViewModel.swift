@@ -22,7 +22,7 @@ class UserViewModel: ObservableObject {
                 return
             }
 
-            // convert to JSON
+            // convert to JSON to data
             do {
                 let users = try JSONDecoder().decode([User].self, from: data)
                 DispatchQueue.main.async {
