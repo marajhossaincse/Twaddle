@@ -13,6 +13,13 @@ struct User: Codable, Identifiable {
     let gender: String?
     let status: String?
 
+    static var example = User(
+        id: 001,
+        name: "Lorem Ipsum",
+        email: "lorem@ipsum.com",
+        gender: "Male",
+        status: "active")
+
     func getId() -> Int {
         return self.id ?? 0
     }

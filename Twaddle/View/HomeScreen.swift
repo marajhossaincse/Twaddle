@@ -13,7 +13,7 @@ struct HomeScreen: View {
     var body: some View {
         List(viewmodel.users) { user in
             NavigationLink(destination: {
-                UserDetailScreen()
+                UserDetailScreen(user: user)
             }, label: {
                 VStack(alignment: .leading, spacing: 0) {
                     HStack(spacing: 0) {
@@ -25,11 +25,11 @@ struct HomeScreen: View {
                                 .foregroundColor(.white)
 
                             Circle()
-                                .stroke(user.getStatusColor(), lineWidth: 2)
+                                .stroke(user.getStatusColor(), lineWidth: 3)
                                 .frame(width: 45, height: 45)
                         }
 
-                        VStack {
+                        VStack(alignment: .leading) {
                             Text(user.getName())
 
                             Text(user.getStatus())
@@ -46,7 +46,6 @@ struct HomeScreen: View {
             }
         }
         .navigationTitle("Home")
-        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewmodel.fetch()
         }
