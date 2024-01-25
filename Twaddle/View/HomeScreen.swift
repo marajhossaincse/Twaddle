@@ -34,10 +34,10 @@ struct HomeScreen: View {
 
                             Text(user.getStatus())
                         }
+                        .padding(.leading)
                     }
-                    .frame(maxWidth: .infinity)
+                    Spacer()
                 }
-                .frame(maxWidth: .infinity)
             })
         }
         .toolbar {

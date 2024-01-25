@@ -34,10 +34,10 @@ struct User: Codable, Identifiable {
     }
 
     func getStatusColor() -> Color {
-        if status?.lowercased() == "active"{
+        if self.status?.lowercased() == "active" {
             return Color.green
         } else {
-            return Color.red
+            return Color.gray
         }
     }
 }
