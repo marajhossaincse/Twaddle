@@ -13,6 +13,16 @@ struct UserDetailScreen: View {
     var body: some View {
         Form {
             Section {
+                HStack(alignment: .top) {
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width: 70)
+
+                    Text("Name: \(user.getName())")
+                }
+            }
+
+            Section {
                 Text("Name: \(user.getName())")
 
                 Text("Email: \(user.getEmail())")
