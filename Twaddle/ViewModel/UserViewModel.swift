@@ -10,60 +10,41 @@ import Foundation
 class UserViewModel: ObservableObject {
     @Published var users: [User] = []
 
-//    func fetchUser() {
-//        // Check if URL is correct
-//        guard let url = URL(string: "https://gorest.co.in/public/v2/users") else {
-//            print("Invalid URL")
-//            return
-//        }
-//
-//        URLSession.shared.dataTask(with: url) { data, response, error in
-//            if let error = error {
-//                print("Error here of: \(error.localizedDescription)")
-//                return
-//            }
-//
-//            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-//                print("Invalid response")
-//                return
-//            }
-//
-//            if let data = data {
-//                do {
-//                    let decodedData = try JSONDecoder().decode([User].self, from: data)
-//                    DispatchQueue.main.async {
-//                        self.users = decodedData
-//                    }
-//                } catch {
-//                    print("Error decoding JSON: \(error)")
-//                }
-//            }
-//        }
-//        .resume()
-//    }
-
     func fetchUser() {
-        // take  url
+        // Check if URL is correct
         guard let url = URL(string: "https://gorest.co.in/public/v2/users") else {
+            print("Invalid URL")
             return
         }
 
-        // do task on url to get data and check for error
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data, error == nil else {
+        // start URL Session to process error, response and data
+        URLSession.shared.dataTask(with: url) { data, response, error in
+
+            // handle if error
+            if let error = error {
+                print("Error here of: \(error.localizedDescription)")
                 return
             }
 
-            // convert to JSON to data
-            do {
-                let users = try JSONDecoder().decode([User].self, from: data)
-                DispatchQueue.main.async {
-                    self?.users = users
+            // handle received response
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("Invalid response")
+                return
+            }
+
+            // handle data
+            if let data = data {
+                do {
+                    // decode from JSON to data
+                    let decodedData = try JSONDecoder().decode([User].self, from: data)
+                    DispatchQueue.main.async {
+                        self.users = decodedData
+                    }
+                } catch {
+                    print("Error decoding JSON: \(error)")
                 }
-            } catch {
-                print(error)
             }
         }
-        task.resume()
+        .resume()
     }
 }
