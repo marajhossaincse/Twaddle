@@ -10,7 +10,7 @@ import Foundation
 class UserViewModel: ObservableObject {
     @Published var users: [User] = []
 
-    func fetch() {
+    func fetchUser() {
         // take  url
         guard let url = URL(string: "https://gorest.co.in/public/v2/users") else {
             return

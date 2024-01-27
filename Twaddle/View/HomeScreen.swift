@@ -47,7 +47,7 @@ struct HomeScreen: View {
         }
         .navigationTitle("Home")
         .onAppear {
-            viewmodel.fetch()
+            viewmodel.fetchUser()
         }
     }
 }
