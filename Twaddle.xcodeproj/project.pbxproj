@@ -15,8 +15,6 @@
 		CE5209002A5D43A6009655BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208FF2A5D43A6009655BD /* User.swift */; };
 		CE5209032A5E841A009655BD /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5209022A5E841A009655BD /* HomeScreen.swift */; };
 		CE5209052A5E8437009655BD /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5209042A5E8437009655BD /* UserCard.swift */; };
-		CE6C60D02B65049A00D3DBAB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C60CF2B65049A00D3DBAB /* Post.swift */; };
-		CE6C60D22B65052000D3DBAB /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C60D12B65052000D3DBAB /* PostViewModel.swift */; };
 		CE9181602A618E9600C27B91 /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +28,6 @@
 		CE5208FF2A5D43A6009655BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE5209022A5E841A009655BD /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		CE5209042A5E8437009655BD /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
-		CE6C60CF2B65049A00D3DBAB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		CE6C60D12B65052000D3DBAB /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				CE5208FF2A5D43A6009655BD /* User.swift */,
-				CE6C60CF2B65049A00D3DBAB /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				CE3376572A5FDB0C008BC39F /* UserViewModel.swift */,
-				CE6C60D12B65052000D3DBAB /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,10 +189,8 @@
 				CE5208F12A5D3C43009655BD /* ContentView.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
 				CE9181602A618E9600C27B91 /* UserDetailScreen.swift in Sources */,
-				CE6C60D22B65052000D3DBAB /* PostViewModel.swift in Sources */,
 				CE5209052A5E8437009655BD /* UserCard.swift in Sources */,
 				CE5209002A5D43A6009655BD /* User.swift in Sources */,
-				CE6C60D02B65049A00D3DBAB /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
