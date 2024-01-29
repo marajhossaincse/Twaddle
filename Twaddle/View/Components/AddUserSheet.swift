@@ -9,12 +9,14 @@ import SwiftUI
 
 struct AddUserSheet: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Work in Progress!")
+        }
     }
 }
 
 struct AddUserSheet_Previews: PreviewProvider {
     static var previews: some View {
-        AddUserSheet()
+        AddUserSheet(newUser: <#T##User#>, name: <#T##String#>, email: <#T##String#>, gender: <#T##String#>)
     }
 }
