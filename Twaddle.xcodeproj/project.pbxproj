@@ -16,6 +16,7 @@
 		CE5209032A5E841A009655BD /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5209022A5E841A009655BD /* HomeScreen.swift */; };
 		CE5209052A5E8437009655BD /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5209042A5E8437009655BD /* UserCard.swift */; };
 		CE9181602A618E9600C27B91 /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */; };
+		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CED30BF82B665361005DCD09 /* AddUserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED30BF72B665361005DCD09 /* AddUserSheet.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		CE5209022A5E841A009655BD /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		CE5209042A5E8437009655BD /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
 		CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
+		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		CED30BF72B665361005DCD09 /* AddUserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 		CE5208ED2A5D3C43009655BD /* Twaddle */ = {
 			isa = PBXGroup;
 			children = (
+				CECF6A5E2B68C8E900CBB8FA /* Resources */,
 				CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */,
 				CE5208F02A5D3C43009655BD /* ContentView.swift */,
 				CE5208FE2A5D42ED009655BD /* View */,
@@ -115,6 +118,14 @@
 				CED30BF72B665361005DCD09 /* AddUserSheet.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CECF6A5E2B68C8E900CBB8FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CECF6A5F2B68C90400CBB8FA /* Symbols.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
 				CE5209032A5E841A009655BD /* HomeScreen.swift in Sources */,
 				CE3376582A5FDB0C008BC39F /* UserViewModel.swift in Sources */,
 				CE5208F12A5D3C43009655BD /* ContentView.swift in Sources */,
