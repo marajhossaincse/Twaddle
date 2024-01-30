@@ -17,6 +17,6 @@ struct AddUserSheet: View {
 
 struct AddUserSheet_Previews: PreviewProvider {
     static var previews: some View {
-        AddUserSheet(newUser: <#T##User#>, name: <#T##String#>, email: <#T##String#>, gender: <#T##String#>)
+        AddUserSheet()
     }
 }

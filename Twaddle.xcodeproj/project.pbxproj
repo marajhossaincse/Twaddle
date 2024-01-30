@@ -17,6 +17,7 @@
 		CE5209052A5E8437009655BD /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5209042A5E8437009655BD /* UserCard.swift */; };
 		CE9181602A618E9600C27B91 /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */; };
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
+		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
 		CED30BF82B665361005DCD09 /* AddUserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED30BF72B665361005DCD09 /* AddUserSheet.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		CE5209042A5E8437009655BD /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
 		CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CED30BF72B665361005DCD09 /* AddUserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				CECF6A5F2B68C90400CBB8FA /* Symbols.swift */,
+				CECF6A612B68D37C00CBB8FA /* Theme.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
 				CE9181602A618E9600C27B91 /* UserDetailScreen.swift in Sources */,
 				CE5209052A5E8437009655BD /* UserCard.swift in Sources */,
+				CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */,
 				CED30BF82B665361005DCD09 /* AddUserSheet.swift in Sources */,
 				CE5209002A5D43A6009655BD /* User.swift in Sources */,
 			);
