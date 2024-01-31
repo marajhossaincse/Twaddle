@@ -39,6 +39,7 @@
 		CE0BA8C52B6A2EE6009FDA0B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CE0BA8CA2B6A5D6B009FDA0B /* Settings */,
 				CE0BA8C92B6A2F13009FDA0B /* Detail */,
 				CE0BA8C82B6A2F0D009FDA0B /* Create */,
 				CE0BA8C72B6A2F00009FDA0B /* People */,
@@ -56,6 +57,9 @@
 		CE0BA8C72B6A2F00009FDA0B /* People */ = {
 			isa = PBXGroup;
 			children = (
+				CE0BA8CD2B6A5D9F009FDA0B /* ViewModels */,
+				CE0BA8CC2B6A5D9A009FDA0B /* Model */,
+				CE0BA8CB2B6A5D93009FDA0B /* Views */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -63,6 +67,9 @@
 		CE0BA8C82B6A2F0D009FDA0B /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				CE0BA8D02B6A5DF1009FDA0B /* ViewModels */,
+				CE0BA8CF2B6A5DEC009FDA0B /* Model */,
+				CE0BA8CE2B6A5DE5009FDA0B /* Views */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -70,8 +77,89 @@
 		CE0BA8C92B6A2F13009FDA0B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				CE0BA8D32B6A5E0C009FDA0B /* ViewModels */,
+				CE0BA8D22B6A5E05009FDA0B /* Model */,
+				CE0BA8D12B6A5DFF009FDA0B /* Views */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		CE0BA8CA2B6A5D6B009FDA0B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE0BA8D42B6A5E20009FDA0B /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE0BA8CB2B6A5D93009FDA0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE0BA8CC2B6A5D9A009FDA0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0BA8CD2B6A5D9F009FDA0B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE0BA8CE2B6A5DE5009FDA0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE0BA8CF2B6A5DEC009FDA0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0BA8D02B6A5DF1009FDA0B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE0BA8D12B6A5DFF009FDA0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE0BA8D22B6A5E05009FDA0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0BA8D32B6A5E0C009FDA0B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE0BA8D42B6A5E20009FDA0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CE5208E22A5D3C42009655BD = {
@@ -93,10 +181,10 @@
 		CE5208ED2A5D3C43009655BD /* Twaddle */ = {
 			isa = PBXGroup;
 			children = (
-				CE0BA8C62B6A2EF1009FDA0B /* Base */,
-				CE0BA8C52B6A2EE6009FDA0B /* Features */,
 				CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */,
 				CE5208F02A5D3C43009655BD /* ContentView.swift */,
+				CE0BA8C62B6A2EF1009FDA0B /* Base */,
+				CE0BA8C52B6A2EE6009FDA0B /* Features */,
 				CECF6A5E2B68C8E900CBB8FA /* Resources */,
 				CE5208F22A5D3C4C009655BD /* Assets.xcassets */,
 				CE5208F42A5D3C4C009655BD /* Preview Content */,
