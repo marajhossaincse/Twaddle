@@ -7,34 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE3376582A5FDB0C008BC39F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3376572A5FDB0C008BC39F /* UserViewModel.swift */; };
 		CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */; };
 		CE5208F12A5D3C43009655BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208F02A5D3C43009655BD /* ContentView.swift */; };
 		CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F22A5D3C4C009655BD /* Assets.xcassets */; };
 		CE5208F62A5D3C4C009655BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */; };
-		CE5209002A5D43A6009655BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208FF2A5D43A6009655BD /* User.swift */; };
-		CE5209032A5E841A009655BD /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5209022A5E841A009655BD /* HomeScreen.swift */; };
-		CE5209052A5E8437009655BD /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5209042A5E8437009655BD /* UserCard.swift */; };
-		CE9181602A618E9600C27B91 /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */; };
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
-		CED30BF82B665361005DCD09 /* AddUserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED30BF72B665361005DCD09 /* AddUserSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE3376572A5FDB0C008BC39F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		CE5208EB2A5D3C43009655BD /* Twaddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twaddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleApp.swift; sourceTree = "<group>"; };
 		CE5208F02A5D3C43009655BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE5208F22A5D3C4C009655BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE5208FF2A5D43A6009655BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CE5209022A5E841A009655BD /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		CE5209042A5E8437009655BD /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
-		CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		CED30BF72B665361005DCD09 /* AddUserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +36,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0BA8C52B6A2EE6009FDA0B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				CE0BA8C92B6A2F13009FDA0B /* Detail */,
+				CE0BA8C82B6A2F0D009FDA0B /* Create */,
+				CE0BA8C72B6A2F00009FDA0B /* People */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CE0BA8C62B6A2EF1009FDA0B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE0BA8C72B6A2F00009FDA0B /* People */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		CE0BA8C82B6A2F0D009FDA0B /* Create */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		CE0BA8C92B6A2F13009FDA0B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		CE5208E22A5D3C42009655BD = {
 			isa = PBXGroup;
 			children = (
@@ -67,12 +93,11 @@
 		CE5208ED2A5D3C43009655BD /* Twaddle */ = {
 			isa = PBXGroup;
 			children = (
-				CECF6A5E2B68C8E900CBB8FA /* Resources */,
+				CE0BA8C62B6A2EF1009FDA0B /* Base */,
+				CE0BA8C52B6A2EE6009FDA0B /* Features */,
 				CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */,
 				CE5208F02A5D3C43009655BD /* ContentView.swift */,
-				CE5208FE2A5D42ED009655BD /* View */,
-				CE5208FD2A5D42E1009655BD /* ViewModel */,
-				CE5208FC2A5D42D7009655BD /* Model */,
+				CECF6A5E2B68C8E900CBB8FA /* Resources */,
 				CE5208F22A5D3C4C009655BD /* Assets.xcassets */,
 				CE5208F42A5D3C4C009655BD /* Preview Content */,
 			);
@@ -85,41 +110,6 @@
 				CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CE5208FC2A5D42D7009655BD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE5208FF2A5D43A6009655BD /* User.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CE5208FD2A5D42E1009655BD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				CE3376572A5FDB0C008BC39F /* UserViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CE5208FE2A5D42ED009655BD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CE5209012A5E83FA009655BD /* Components */,
-				CE5209022A5E841A009655BD /* HomeScreen.swift */,
-				CE91815F2A618E9600C27B91 /* UserDetailScreen.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CE5209012A5E83FA009655BD /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				CE5209042A5E8437009655BD /* UserCard.swift */,
-				CED30BF72B665361005DCD09 /* AddUserSheet.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		CECF6A5E2B68C8E900CBB8FA /* Resources */ = {
@@ -202,15 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
-				CE5209032A5E841A009655BD /* HomeScreen.swift in Sources */,
-				CE3376582A5FDB0C008BC39F /* UserViewModel.swift in Sources */,
 				CE5208F12A5D3C43009655BD /* ContentView.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
-				CE9181602A618E9600C27B91 /* UserDetailScreen.swift in Sources */,
-				CE5209052A5E8437009655BD /* UserCard.swift in Sources */,
 				CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */,
-				CED30BF82B665361005DCD09 /* AddUserSheet.swift in Sources */,
-				CE5209002A5D43A6009655BD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
