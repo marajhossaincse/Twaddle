@@ -24,6 +24,7 @@
 		CE8CAEB12B6BD5B000292479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CEE9B6522B720B470018D002 /* LearningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +167,7 @@
 		CE5208E22A5D3C42009655BD = {
 			isa = PBXGroup;
 			children = (
+				CEE9B6522B720B470018D002 /* LearningCodable.playground */,
 				CE5208ED2A5D3C43009655BD /* Twaddle */,
 				CE5208EC2A5D3C43009655BD /* Products */,
 			);
