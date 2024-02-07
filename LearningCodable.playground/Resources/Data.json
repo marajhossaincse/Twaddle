@@ -1,6 +1,8 @@
 [
     {
         "userId": 1,
+        "first_name": "Maraj",
+        "last_name": "Hossain",
         "username": "maraj9hossain",
         "occupation": {
             "name": "Content Creator",
@@ -9,7 +11,9 @@
     },
     {
         "userId": 2,
-        "username": "bill",
+        "first_name":"Bill",
+        "last_name":"Ney",
+        "username": "bill@ney",
         "occupation": {
             "name": "Ice Cream Man",
             "isActive": true

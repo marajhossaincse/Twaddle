@@ -2,11 +2,15 @@ import UIKit
 
 struct User: Codable {
     let id: Int
+    let firstName: String
+    let lastName: String
     let username: String
     let occupation: Occupation
     
     enum CodingKeys: String, CodingKey{
         case id = "userId"
+        case firstName
+        case lastName
         case username
         case occupation
     }
@@ -25,11 +29,13 @@ if let path = Bundle.main.path(forResource: "Data", ofType: "json"),
 {
     // Decoding data to model
     let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
     let users = try decoder.decode([User].self, from: data)
     dump(users)
 
     // Encoding model to data
     let encoder = JSONEncoder()
+    encoder.keyEncodingStrategy = .convertToSnakeCase
     let data = try encoder.encode(users)
     dump(String(data: data, encoding: .utf8))
 }
