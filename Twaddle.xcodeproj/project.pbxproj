@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3AD4442B7360B000B9C618 /* LearningGenerics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningGenerics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CE5208EB2A5D3C43009655BD /* Twaddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twaddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleApp.swift; sourceTree = "<group>"; };
 		CE5208F02A5D3C43009655BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		CE5208E22A5D3C42009655BD = {
 			isa = PBXGroup;
 			children = (
+				CE3AD4442B7360B000B9C618 /* LearningGenerics.playground */,
 				CEE9B6522B720B470018D002 /* LearningCodable.playground */,
 				CE5208ED2A5D3C43009655BD /* Twaddle */,
 				CE5208EC2A5D3C43009655BD /* Products */,
