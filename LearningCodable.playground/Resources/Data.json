@@ -4,16 +4,19 @@
         "first_name": "Maraj",
         "last_name": "Hossain",
         "username": "maraj9hossain",
+        "date_of_birth": "1994-10-27T00:00:00Z",
         "occupation": {
             "name": "Content Creator",
             "isActive": true
         }
+        
     },
     {
         "userId": 2,
         "first_name":"Bill",
         "last_name":"Ney",
         "username": "bill@ney",
+        "date_of_birth": "1997-03-09T00:00:00Z",
         "occupation": {
             "name": "Ice Cream Man",
             "isActive": true

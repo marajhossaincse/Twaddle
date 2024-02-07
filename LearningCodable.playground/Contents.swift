@@ -6,6 +6,7 @@ struct User: Codable {
     let lastName: String
     let username: String
     let occupation: Occupation
+    let dateOfBirth: Date
     
     enum CodingKeys: String, CodingKey{
         case id = "userId"
@@ -13,6 +14,7 @@ struct User: Codable {
         case lastName
         case username
         case occupation
+        case dateOfBirth
     }
 }
 
@@ -29,12 +31,14 @@ if let path = Bundle.main.path(forResource: "Data", ofType: "json"),
 {
     // Decoding data to model
     let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .iso8601
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     let users = try decoder.decode([User].self, from: data)
     dump(users)
 
     // Encoding model to data
     let encoder = JSONEncoder()
+    encoder.dateEncodingStrategy = .iso8601
     encoder.keyEncodingStrategy = .convertToSnakeCase
     let data = try encoder.encode(users)
     dump(String(data: data, encoding: .utf8))
