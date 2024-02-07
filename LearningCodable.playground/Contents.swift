@@ -2,7 +2,12 @@ import UIKit
 
 struct User: Codable {
     let username: String
-    let occupation: String
+    let occupation: Occupation
+}
+
+struct Occupation: Codable {
+    let name: String
+    let isActive: Bool
 }
 
 // Step 1: Get the path to the Data.json file

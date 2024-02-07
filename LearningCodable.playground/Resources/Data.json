@@ -1,10 +1,16 @@
 [
     {
         "username": "maraj9hossain",
-        "occupation": "iOS developer"
+        "occupation": {
+            "name": "Content Creator",
+            "isActive": true
+        }
     },
     {
         "username": "bill",
-        "occupation": "Ice Creamman"
+        "occupation": {
+            "name": "Ice Cream Man",
+            "isActive": true
+        }
     }
 ]
