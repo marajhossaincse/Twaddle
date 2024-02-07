@@ -1,8 +1,15 @@
 import UIKit
 
 struct User: Codable {
+    let id: Int
     let username: String
     let occupation: Occupation
+    
+    enum CodingKeys: String, CodingKey{
+        case id = "userId"
+        case username
+        case occupation
+    }
 }
 
 struct Occupation: Codable {
