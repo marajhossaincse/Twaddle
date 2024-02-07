@@ -5,7 +5,7 @@ struct User: Codable {
     let firstName: String
     let lastName: String
     let username: String
-    let occupation: Occupation
+    let occupation: Occupation?
     let dateOfBirth: Date
     
     enum CodingKeys: String, CodingKey{

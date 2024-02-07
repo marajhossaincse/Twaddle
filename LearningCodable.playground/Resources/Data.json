@@ -17,9 +17,5 @@
         "last_name":"Ney",
         "username": "bill@ney",
         "date_of_birth": "1997-03-09T00:00:00Z",
-        "occupation": {
-            "name": "Ice Cream Man",
-            "isActive": true
-        }
     }
 ]
