@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3AD4472B74B07D00B9C618 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */; };
+		CE3AD4492B74B0E400B9C618 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD4482B74B0E400B9C618 /* SingleUserData.json */; };
+		CE3AD44B2B74B24600B9C618 /* UserDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AD44A2B74B24600B9C618 /* UserDetailResponse.swift */; };
+		CE3AD44D2B74B2A000B9C618 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AD44C2B74B2A000B9C618 /* UsersResponse.swift */; };
 		CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */; };
 		CE5208F12A5D3C43009655BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208F02A5D3C43009655BD /* ContentView.swift */; };
 		CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F22A5D3C4C009655BD /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		CE3AD4442B7360B000B9C618 /* LearningGenerics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningGenerics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
+		CE3AD4482B74B0E400B9C618 /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
+		CE3AD44A2B74B24600B9C618 /* UserDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailResponse.swift; sourceTree = "<group>"; };
+		CE3AD44C2B74B2A000B9C618 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		CE5208EB2A5D3C43009655BD /* Twaddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twaddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleApp.swift; sourceTree = "<group>"; };
 		CE5208F02A5D3C43009655BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +113,7 @@
 		CE0BA8CC2B6A5D9A009FDA0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE3AD44C2B74B2A000B9C618 /* UsersResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +156,7 @@
 		CE0BA8D22B6A5E05009FDA0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE3AD44A2B74B24600B9C618 /* UserDetailResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +173,15 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CE3AD4452B74B03900B9C618 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */,
+				CE3AD4482B74B0E400B9C618 /* SingleUserData.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		CE5208E22A5D3C42009655BD = {
@@ -209,6 +228,7 @@
 		CECF6A5E2B68C8E900CBB8FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE3AD4452B74B03900B9C618 /* JSON */,
 				CECF6A5F2B68C90400CBB8FA /* Symbols.swift */,
 				CECF6A612B68D37C00CBB8FA /* Theme.swift */,
 			);
@@ -274,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5208F62A5D3C4C009655BD /* Preview Assets.xcassets in Resources */,
+				CE3AD4492B74B0E400B9C618 /* SingleUserData.json in Resources */,
 				CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */,
+				CE3AD4472B74B07D00B9C618 /* UsersStaticData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +310,9 @@
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
 				CE5208F12A5D3C43009655BD /* ContentView.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
+				CE3AD44B2B74B24600B9C618 /* UserDetailResponse.swift in Sources */,
 				CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */,
+				CE3AD44D2B74B2A000B9C618 /* UsersResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
