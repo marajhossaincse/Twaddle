@@ -15,6 +15,15 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
         }
         .padding()
+        .onAppear {
+            print("👇🏽 Users response")
+            dump(
+                try? StaticJSONMapper.decode(
+                    file: "UsersStaticData",
+                    type: UsersReponse.self
+                )
+            )
+        }
     }
 }
 
