@@ -23,6 +23,14 @@ struct ContentView: View {
                     type: UsersReponse.self
                 )
             )
+
+            print("👇🏽 Single user response")
+            dump(
+                try? StaticJSONMapper.decode(
+                    file: "SingleUserData",
+                    type: UserDetailResponse.self
+                )
+            )
         }
     }
 }
