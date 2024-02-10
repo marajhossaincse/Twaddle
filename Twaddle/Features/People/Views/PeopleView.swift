@@ -19,6 +19,12 @@ struct PeopleView: View {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(0 ... 5, id: \.self) { item in
                             Text("\(item) Hello World!")
+
+                            VStack(spacing: 0) {
+                                Rectangle()
+                                    .fill(.blue)
+                                    .frame(height: 130)
+                            }
                         }
                     }
                 }
