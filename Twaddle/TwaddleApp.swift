@@ -19,8 +19,12 @@ import SwiftUI
 struct TwaddleApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
+            TabView{
+                PeopleView()
+                    .tabItem {
+                        Symbols.person
+                        Text("Home")
+                    }
             }
         }
     }
