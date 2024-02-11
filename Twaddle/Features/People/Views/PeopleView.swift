@@ -24,6 +24,14 @@ struct PeopleView: View {
                                 Rectangle()
                                     .fill(.blue)
                                     .frame(height: 130)
+
+                                VStack {
+                                    Text("# \(item)")
+                                        .font(
+                                            .system(.caption, design: .rounded)
+                                                .bold()
+                                        )
+                                }
                             }
                         }
                     }
