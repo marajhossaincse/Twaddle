@@ -18,27 +18,38 @@ struct PeopleView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(0 ... 5, id: \.self) { item in
-                            Text("\(item) Hello World!")
 
                             VStack(spacing: 0) {
                                 Rectangle()
                                     .fill(.blue)
                                     .frame(height: 130)
 
-                                VStack {
-                                    Text("# \(item)")
+                                VStack(alignment: .leading) {
+                                    Text("#\(item)")
                                         .font(
-                                            .system(.caption, design: .rounded)
-                                                .bold()
+                                            .system(
+                                                .caption,
+                                                design: .rounded
+                                            )
+                                            .bold()
                                         )
                                         .foregroundColor(.white)
                                         .padding(.horizontal, 9)
                                         .padding(.vertical, 4)
                                         .background(Theme.pill, in: Capsule())
+
+                                    Text("First Name - Last Name")
                                 }
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 5)
+                                .background(Theme.detailBackground)
                             }
+                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                            .shadow(color: Theme.text.opacity(0.1), radius: 2, x: 0, y: 1)
                         }
                     }
+                    .padding()
                 }
             }
             .navigationTitle("People")
