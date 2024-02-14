@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF52B2B7C8FB200F3AB95 /* PersonItemView.swift */; };
+		CE1EF52F2B7C90B500F3AB95 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF52E2B7C90B500F3AB95 /* PillView.swift */; };
 		CE3AD4472B74B07D00B9C618 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */; };
 		CE3AD4492B74B0E400B9C618 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD4482B74B0E400B9C618 /* SingleUserData.json */; };
 		CE3AD44B2B74B24600B9C618 /* UserDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AD44A2B74B24600B9C618 /* UserDetailResponse.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		CE1EF52B2B7C8FB200F3AB95 /* PersonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemView.swift; sourceTree = "<group>"; };
+		CE1EF52E2B7C90B500F3AB95 /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 		CE3AD4442B7360B000B9C618 /* LearningGenerics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningGenerics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		CE3AD4482B74B0E400B9C618 /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		CE0BA8C62B6A2EF1009FDA0B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				CE1EF52D2B7C90A300F3AB95 /* Views */,
 				CE3AD44E2B75B69C00B9C618 /* Mapper */,
 			);
 			path = Base;
@@ -178,6 +181,14 @@
 		CE0BA8D42B6A5E20009FDA0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE1EF52D2B7C90A300F3AB95 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE1EF52E2B7C90B500F3AB95 /* PillView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +336,7 @@
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
 				CECB2F182B7799E600B806F8 /* PeopleView.swift in Sources */,
+				CE1EF52F2B7C90B500F3AB95 /* PillView.swift in Sources */,
 				CE3AD44B2B74B24600B9C618 /* UserDetailResponse.swift in Sources */,
 				CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */,
 				CE3AD4502B75B6B700B9C618 /* StaticJSONMapper.swift in Sources */,
