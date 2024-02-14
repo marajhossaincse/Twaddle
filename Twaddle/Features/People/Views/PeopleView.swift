@@ -55,15 +55,21 @@ struct PeopleView: View {
             .navigationTitle("People")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button {} label: {
-                        Symbols.plus
-                            .font(
-                                .system(.headline, design: .rounded)
-                                    .bold()
-                            )
-                    }
+                    create
                 }
             }
+        }
+    }
+}
+
+private extension PeopleView {
+    var create: some View {
+        Button {} label: {
+            Symbols.plus
+                .font(
+                    .system(.headline, design: .rounded)
+                        .bold()
+                )
         }
     }
 }
