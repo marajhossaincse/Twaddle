@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF52B2B7C8FB200F3AB95 /* PersonItemView.swift */; };
 		CE3AD4472B74B07D00B9C618 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */; };
 		CE3AD4492B74B0E400B9C618 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD4482B74B0E400B9C618 /* SingleUserData.json */; };
 		CE3AD44B2B74B24600B9C618 /* UserDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AD44A2B74B24600B9C618 /* UserDetailResponse.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1EF52B2B7C8FB200F3AB95 /* PersonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemView.swift; sourceTree = "<group>"; };
 		CE3AD4442B7360B000B9C618 /* LearningGenerics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningGenerics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		CE3AD4482B74B0E400B9C618 /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				CECB2F172B7799E600B806F8 /* PeopleView.swift */,
+				CE1EF52B2B7C8FB200F3AB95 /* PersonItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */,
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
 				CECB2F182B7799E600B806F8 /* PeopleView.swift in Sources */,
