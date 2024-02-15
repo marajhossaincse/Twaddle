@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PersonItemView: View {
-    let user: Int
+    let user: User
 
     var body: some View {
         VStack(spacing: 0) {
@@ -17,9 +17,9 @@ struct PersonItemView: View {
                 .frame(height: 130)
 
             VStack(alignment: .leading) {
-                PillView(id: user)
+                PillView(id: user.id)
 
-                Text("First Name - Last Name")
+                Text("\(user.firstName) \(user.lastName)")
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 8)
@@ -32,8 +32,14 @@ struct PersonItemView: View {
 }
 
 struct PersonItemView_Previews: PreviewProvider {
+    static var previewUser: User {
+        let users = try! StaticJSONMapper.decode(file: "UserStaticData", type: UsersReponse.self)
+
+        return users.data.first!
+    }
+
     static var previews: some View {
-        PersonItemView(user: 0)
+        PersonItemView(user: previewUser)
             .frame(width: 250)
     }
 }
