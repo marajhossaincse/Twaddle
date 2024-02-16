@@ -13,16 +13,9 @@ struct DetailView: View {
             background
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
-                        PillView(id: 0)
-
-                        firstname
-
-                        lastname
-
-                        email
-                    }
+                    general
                 }
+                .padding()
             }
         }
     }
@@ -36,6 +29,28 @@ private extension DetailView {
 }
 
 private extension DetailView {
+    @ViewBuilder
+    var general: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            PillView(id: 0)
+
+            Group {
+                firstname
+
+                lastname
+
+                email
+            }
+            .foregroundColor(Theme.text)
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 18)
+        .background(
+            Theme.detailBackground,
+            in: RoundedRectangle(cornerRadius: 16, style: .continuous)
+        )
+    }
+
     @ViewBuilder
     var firstname: some View {
         Text("First Name")
