@@ -15,24 +15,7 @@ struct DetailView: View {
             background
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
-                    if let avatarAbsoluteString = userInfo?.data.avatar,
-                       let avatarUrl = URL(string: avatarAbsoluteString)
-                    {
-                        AsyncImage(url: avatarUrl) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(height: 250)
-                                .clipped()
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        .clipShape(
-                            RoundedRectangle(
-                                cornerRadius: 16,
-                                style: .continuous
-                            ))
-                    }
+                    avatar
 
                     Group {
                         general
@@ -49,6 +32,7 @@ struct DetailView: View {
                 .padding()
             }
         }
+        .navigationTitle("Details")
         .onAppear {
             do {
                 userInfo = try StaticJSONMapper.decode(
@@ -66,6 +50,28 @@ private extension DetailView {
     var background: some View {
         Theme.background
             .ignoresSafeArea(edges: .top)
+    }
+
+    @ViewBuilder
+    var avatar: some View {
+        if let avatarAbsoluteString = userInfo?.data.avatar,
+           let avatarUrl = URL(string: avatarAbsoluteString)
+        {
+            AsyncImage(url: avatarUrl) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 250)
+                    .clipped()
+            } placeholder: {
+                ProgressView()
+            }
+            .clipShape(
+                RoundedRectangle(
+                    cornerRadius: 16,
+                    style: .continuous
+                ))
+        }
     }
 
     @ViewBuilder
@@ -158,6 +164,8 @@ private extension DetailView {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        NavigationView {
+            DetailView()
+        }
     }
 }
