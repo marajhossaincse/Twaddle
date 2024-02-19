@@ -17,6 +17,7 @@
 		CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */; };
 		CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F22A5D3C4C009655BD /* Assets.xcassets */; };
 		CE5208F62A5D3C4C009655BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */; };
+		CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74401F2B8325D70015EAB0 /* CreateView.swift */; };
 		CECB2F182B7799E600B806F8 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB2F172B7799E600B806F8 /* PeopleView.swift */; };
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
@@ -36,6 +37,7 @@
 		CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleApp.swift; sourceTree = "<group>"; };
 		CE5208F22A5D3C4C009655BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE74401F2B8325D70015EAB0 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		CE8CAEB12B6BD5B000292479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CECB2F172B7799E600B806F8 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		CE0BA8CE2B6A5DE5009FDA0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE74401F2B8325D70015EAB0 /* CreateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */,
 				CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */,
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,

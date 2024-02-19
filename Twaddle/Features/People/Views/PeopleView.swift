@@ -11,6 +11,7 @@ struct PeopleView: View {
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
 
     @State private var users: [User] = []
+    @State private var shouldShowCreate = false
 
     var body: some View {
         NavigationView {
@@ -41,6 +42,9 @@ struct PeopleView: View {
                     users = res.data
                 } catch {}
             }
+            .sheet(isPresented: $shouldShowCreate) {
+                CreateView()
+            }
         }
     }
 }
@@ -52,7 +56,9 @@ private extension PeopleView {
     }
 
     var create: some View {
-        Button {} label: {
+        Button {
+            shouldShowCreate.toggle()
+        } label: {
             Symbols.plus
                 .font(
                     .system(.headline, design: .rounded)
