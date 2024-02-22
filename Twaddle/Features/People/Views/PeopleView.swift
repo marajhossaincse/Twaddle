@@ -37,10 +37,23 @@ struct PeopleView: View {
                 }
             }
             .onAppear {
-                do {
-                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersReponse.self)
-                    users = res.data
-                } catch {}
+                NetworkingManager.shared.request(
+                    "https://reqres.in/api/users/1",
+                    type: UsersReponse.self
+                ) { res in
+                    switch res {
+                    case .success(let resultData):
+                        users = resultData.data
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+
+                ////  API call format when using mock json
+//                do {
+//                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersReponse.self)
+//                    users = res.data
+//                } catch {}
             }
             .sheet(isPresented: $shouldShowCreate) {
                 CreateView()
