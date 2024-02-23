@@ -10,7 +10,9 @@ import SwiftUI
 struct PeopleView: View {
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
 
-    @State private var users: [User] = []
+    @StateObject private var vm = PeopleViewModel()
+
+//    @State private var users: [User] = []
     @State private var shouldShowCreate = false
 
     var body: some View {
@@ -19,7 +21,7 @@ struct PeopleView: View {
                 background
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
-                        ForEach(users, id: \.id) { user in
+                        ForEach(vm.users, id: \.id) { user in
                             NavigationLink(destination: {
                                 DetailView()
                             }, label: {
@@ -37,18 +39,7 @@ struct PeopleView: View {
                 }
             }
             .onAppear {
-                NetworkingManager.shared.request(
-                    "https://reqres.in/api/users/1",
-                    type: UsersReponse.self
-                ) { res in
-                    switch res {
-                    case .success(let resultData):
-                        users = resultData.data
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
-
+                vm.fetchUsers()
                 ////  API call format when using mock json
 //                do {
 //                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersReponse.self)

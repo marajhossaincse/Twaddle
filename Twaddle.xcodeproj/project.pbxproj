@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE08860E2B886EBD00D53D49 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08860D2B886EBD00D53D49 /* PeopleViewModel.swift */; };
 		CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF52B2B7C8FB200F3AB95 /* PersonItemView.swift */; };
 		CE1EF52F2B7C90B500F3AB95 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF52E2B7C90B500F3AB95 /* PillView.swift */; };
 		CE3AD4472B74B07D00B9C618 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD4462B74B07D00B9C618 /* UsersStaticData.json */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE08860D2B886EBD00D53D49 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		CE1EF52B2B7C8FB200F3AB95 /* PersonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemView.swift; sourceTree = "<group>"; };
 		CE1EF52E2B7C90B500F3AB95 /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 		CE3AD4442B7360B000B9C618 /* LearningGenerics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningGenerics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -138,6 +140,7 @@
 		CE0BA8CD2B6A5D9F009FDA0B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE08860D2B886EBD00D53D49 /* PeopleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE08860E2B886EBD00D53D49 /* PeopleViewModel.swift in Sources */,
 				CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */,
 				CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */,
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
