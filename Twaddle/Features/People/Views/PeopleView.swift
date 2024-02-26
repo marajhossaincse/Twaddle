@@ -23,7 +23,7 @@ struct PeopleView: View {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(vm.users, id: \.id) { user in
                             NavigationLink(destination: {
-                                DetailView()
+                                DetailView(userId: user.id)
                             }, label: {
                                 PersonItemView(user: user)
                             })
