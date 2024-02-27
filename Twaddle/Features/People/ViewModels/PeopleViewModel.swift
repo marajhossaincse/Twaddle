@@ -12,7 +12,7 @@ final class PeopleViewModel: ObservableObject {
     
     func fetchUsers() {
         NetworkingManager.shared.request(
-            "https://reqres.in/api/users/1",
+            "https://reqres.in/api/users",
             type: UsersReponse.self
         ) { [weak self] res in
            

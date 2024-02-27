@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DetailView: View {
     let userId: Int
-    @State private var userInfo: UserDetailResponse?
+    @StateObject private var vm = DetailViewModel()
+
+//    @State private var userInfo: UserDetailResponse?
 
     var body: some View {
         ZStack {
@@ -35,14 +37,15 @@ struct DetailView: View {
         }
         .navigationTitle("Details")
         .onAppear {
-            do {
-                userInfo = try StaticJSONMapper.decode(
-                    file: "SingleUserData",
-                    type: UserDetailResponse.self
-                )
-            } catch {
-                print(error)
-            }
+            vm.fetchDetails(for: userId)
+//            do {
+//                userInfo = try StaticJSONMapper.decode(
+//                    file: "SingleUserData",
+//                    type: UserDetailResponse.self
+//                )
+//            } catch {
+//                print(error)
+//            }
         }
     }
 }
@@ -55,7 +58,7 @@ private extension DetailView {
 
     @ViewBuilder
     var avatar: some View {
-        if let avatarAbsoluteString = userInfo?.data.avatar,
+        if let avatarAbsoluteString = vm.userInfo?.data.avatar,
            let avatarUrl = URL(string: avatarAbsoluteString)
         {
             AsyncImage(url: avatarUrl) { image in
@@ -77,9 +80,9 @@ private extension DetailView {
 
     @ViewBuilder
     var link: some View {
-        if let supportAbsoluteString = userInfo?.support.url,
+        if let supportAbsoluteString = vm.userInfo?.support.url,
            let supportUlr = URL(string: supportAbsoluteString),
-           let supportText = userInfo?.support.text
+           let supportText = vm.userInfo?.support.text
         {
             Link(
                 destination: supportUlr)
@@ -106,7 +109,7 @@ private extension DetailView {
 private extension DetailView {
     var general: some View {
         VStack(alignment: .leading, spacing: 8) {
-            PillView(id: userInfo?.data.id ?? 0)
+            PillView(id: vm.userInfo?.data.id ?? 0)
 
             Group {
                 firstname
@@ -126,7 +129,7 @@ private extension DetailView {
                 .system(.body, design: .rounded)
                     .weight(.semibold)
             )
-        Text(userInfo?.data.firstName ?? "-")
+        Text(vm.userInfo?.data.firstName ?? "-")
             .font(
                 .system(.subheadline, design: .rounded)
             )
@@ -141,7 +144,7 @@ private extension DetailView {
                 .system(.body, design: .rounded)
                     .weight(.semibold)
             )
-        Text(userInfo?.data.firstName ?? "-")
+        Text(vm.userInfo?.data.firstName ?? "-")
             .font(
                 .system(.subheadline, design: .rounded)
             )

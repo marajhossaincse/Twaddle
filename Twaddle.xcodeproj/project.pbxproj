@@ -23,6 +23,7 @@
 		CECB2F182B7799E600B806F8 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB2F172B7799E600B806F8 /* PeopleView.swift */; };
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
+		CEDA05A32B8DBA7A0077DEE7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */; };
 		CEFD56A72B7F2F0600C70157 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD56A62B7F2F0600C70157 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		CECB2F172B7799E600B806F8 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		CEE9B6522B720B470018D002 /* LearningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CEFD56A62B7F2F0600C70157 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +188,7 @@
 		CE0BA8D32B6A5E0C009FDA0B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				CECB2F182B7799E600B806F8 /* PeopleView.swift in Sources */,
 				CE1EF52F2B7C90B500F3AB95 /* PillView.swift in Sources */,
 				CE3AD44B2B74B24600B9C618 /* UserDetailResponse.swift in Sources */,
+				CEDA05A32B8DBA7A0077DEE7 /* DetailViewModel.swift in Sources */,
 				CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */,
 				CE7440232B84B9950015EAB0 /* NetworkingManager.swift in Sources */,
 				CE3AD4502B75B6B700B9C618 /* StaticJSONMapper.swift in Sources */,
