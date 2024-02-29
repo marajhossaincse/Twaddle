@@ -19,11 +19,12 @@ import SwiftUI
 struct TwaddleApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView{
+            TabView {
                 PeopleView()
                     .tabItem {
                         Symbols.person
                         Text("Home")
+                        Text("Temporary text for commit.")
                     }
             }
         }
