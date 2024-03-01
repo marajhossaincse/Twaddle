@@ -106,7 +106,7 @@ extension NetworkingManager {
 extension NetworkingManager {
     enum MethodType {
         case GET
-        case POST
+        case POST(data: Data?)
     }
 }
 
@@ -120,8 +120,9 @@ private extension NetworkingManager {
         switch methodType {
         case .GET:
             request.httpMethod = "GET"
-        case .POST:
+        case .POST(let data):
             request.httpMethod = "POST"
+            request.httpBody = data
         }
 
         return request

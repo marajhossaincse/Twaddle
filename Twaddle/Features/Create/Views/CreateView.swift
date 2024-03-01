@@ -30,6 +30,11 @@ struct CreateView: View {
                     done
                 }
             }
+            .onChange(of: vm.state) { formState in
+                if formState == .successful{
+                    dismiss()
+                }
+            }
         }
     }
 }
