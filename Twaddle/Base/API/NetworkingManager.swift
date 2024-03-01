@@ -64,7 +64,7 @@ final class NetworkingManager {
         _ absoluteURL: String,
         completion: @escaping (Result<Void, Error>) -> Void)
     {
-        guard let url = URL(string: absoluteURL) else {
+        guard  let url = URL(string: absoluteURL) else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
