@@ -24,7 +24,6 @@ struct TwaddleApp: App {
                     .tabItem {
                         Symbols.person
                         Text("Home")
-                        Text("Temporary text for commit.")
                     }
             }
         }
