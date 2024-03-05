@@ -60,11 +60,11 @@ final class NetworkingManager {
     }
 
     func request(
-        methodType: MethodType = .POST,
+        methodType: MethodType = .GET,
         _ absoluteURL: String,
         completion: @escaping (Result<Void, Error>) -> Void)
     {
-        guard  let url = URL(string: absoluteURL) else {
+        guard let url = URL(string: absoluteURL) else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
@@ -94,7 +94,7 @@ final class NetworkingManager {
 }
 
 extension NetworkingManager {
-    enum NetworkingError: Error {
+    enum NetworkingError: LocalizedError {
         case invalidUrl
         case custom(error: Error)
         case invalidStatusCode(statusCode: Int)

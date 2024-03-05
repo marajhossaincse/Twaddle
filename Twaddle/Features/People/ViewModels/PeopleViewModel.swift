@@ -14,7 +14,7 @@ final class PeopleViewModel: ObservableObject {
 
     func fetchUsers() {
         NetworkingManager.shared.request(
-            "https://reqres.in/api/users",
+            "https://reqres.in/api/usersx",
             type: UsersReponse.self
         ) { [weak self] res in
 
@@ -23,7 +23,8 @@ final class PeopleViewModel: ObservableObject {
                 case .success(let resultData):
                     self?.users = resultData.data
                 case .failure(let error):
-                    print(error)
+                    self?.hasError = true
+                    self?.error = error as? NetworkingManager.NetworkingError
                 }
             }
         }
