@@ -19,17 +19,22 @@ struct PeopleView: View {
         NavigationView {
             ZStack {
                 background
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 16) {
-                        ForEach(vm.users, id: \.id) { user in
-                            NavigationLink(destination: {
-                                DetailView(userId: user.id)
-                            }, label: {
-                                PersonItemView(user: user)
-                            })
+
+                if vm.isLoading {
+                    ProgressView()
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 16) {
+                            ForEach(vm.users, id: \.id) { user in
+                                NavigationLink(destination: {
+                                    DetailView(userId: user.id)
+                                }, label: {
+                                    PersonItemView(user: user)
+                                })
+                            }
                         }
+                        .padding()
                     }
-                    .padding()
                 }
             }
             .navigationTitle("People")

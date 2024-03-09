@@ -21,6 +21,9 @@ final class PeopleViewModel: ObservableObject {
         ) { [weak self] res in
 
             DispatchQueue.main.async {
+                defer{
+                    self?.isLoading = false
+                }
                 switch res {
                 case .success(let resultData):
                     self?.users = resultData.data
