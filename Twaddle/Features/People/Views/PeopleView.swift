@@ -82,6 +82,7 @@ private extension PeopleView {
                         .bold()
                 )
         }
+        .disabled(vm.isLoading)
     }
 }
 
