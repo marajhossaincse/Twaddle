@@ -26,6 +26,7 @@
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
 		CEDA05A32B8DBA7A0077DEE7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */; };
+		CEF5D90D2BA33B1900F040EE /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5D90C2BA33B1900F040EE /* CheckmarkPopoverView.swift */; };
 		CEFD56A72B7F2F0600C70157 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD56A62B7F2F0600C70157 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		CEE9B6522B720B470018D002 /* LearningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CEF5D90C2BA33B1900F040EE /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
 		CEFD56A62B7F2F0600C70157 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1EF52E2B7C90B500F3AB95 /* PillView.swift */,
+				CEF5D90C2BA33B1900F040EE /* CheckmarkPopoverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
 				CEB9F2432B91AC1400B085CF /* NewPerson.swift in Sources */,
+				CEF5D90D2BA33B1900F040EE /* CheckmarkPopoverView.swift in Sources */,
 				CEFD56A72B7F2F0600C70157 /* DetailView.swift in Sources */,
 				CECB2F182B7799E600B806F8 /* PeopleView.swift in Sources */,
 				CE1EF52F2B7C90B500F3AB95 /* PillView.swift in Sources */,
