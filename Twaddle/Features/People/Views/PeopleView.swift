@@ -15,6 +15,8 @@ struct PeopleView: View {
 //    @State private var users: [User] = []
     @State private var shouldShowCreate = false
 
+    @State private var shouldShowSuccess = false
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -52,7 +54,11 @@ struct PeopleView: View {
 //                } catch {}
             }
             .sheet(isPresented: $shouldShowCreate) {
-                CreateView()
+                CreateView {
+                    withAnimation(.spring().delay(0.25)) {
+                        self.shouldShowCreate.toggle()
+                    }
+                }
             }
             .alert(
                 isPresented: $vm.hasError,
@@ -60,6 +66,18 @@ struct PeopleView: View {
             ) {
                 Button("Retry") {
                     vm.fetchUsers()
+                }
+            }
+            .overlay {
+                if shouldShowSuccess {
+                    CheckmarkPopoverView()
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                withAnimation {
+                                    self.shouldShowCreate.toggle()
+                                }
+                            }
+                        }
                 }
             }
         }
