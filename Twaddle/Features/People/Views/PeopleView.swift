@@ -11,10 +11,8 @@ struct PeopleView: View {
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
 
     @StateObject private var vm = PeopleViewModel()
-
 //    @State private var users: [User] = []
     @State private var shouldShowCreate = false
-
     @State private var shouldShowSuccess = false
 
     var body: some View {
@@ -56,7 +54,7 @@ struct PeopleView: View {
             .sheet(isPresented: $shouldShowCreate) {
                 CreateView {
                     withAnimation(.spring().delay(0.25)) {
-                        self.shouldShowCreate.toggle()
+                        self.shouldShowSuccess.toggle()
                     }
                 }
             }
@@ -72,9 +70,10 @@ struct PeopleView: View {
                 if shouldShowSuccess {
                     CheckmarkPopoverView()
                         .onAppear {
+                            print("print", shouldShowSuccess)
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                withAnimation {
-                                    self.shouldShowCreate.toggle()
+                                withAnimation(.spring()) {
+                                    self.shouldShowSuccess.toggle()
                                 }
                             }
                         }

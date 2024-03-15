@@ -11,7 +11,6 @@ final class CreateViewModel: ObservableObject {
     @Published var person = NewPerson()
     @Published private(set) var state: SubmissionState?
     @Published private(set) var error: NetworkingManager.NetworkingError?
-//    @Published private(set) var state: Bool = false
     @Published var hasError: Bool = false
 
     func create() {
