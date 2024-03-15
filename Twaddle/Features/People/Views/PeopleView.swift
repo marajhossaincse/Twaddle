@@ -69,6 +69,7 @@ struct PeopleView: View {
             .overlay {
                 if shouldShowSuccess {
                     CheckmarkPopoverView()
+                        .transition(.scale.combined(with: .opacity))
                         .onAppear {
                             print("print", shouldShowSuccess)
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
