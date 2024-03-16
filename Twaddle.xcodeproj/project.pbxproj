@@ -22,6 +22,7 @@
 		CE7440232B84B9950015EAB0 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7440222B84B9950015EAB0 /* NetworkingManager.swift */; };
 		CEB9F2432B91AC1400B085CF /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9F2422B91AC1400B085CF /* NewPerson.swift */; };
 		CEB9F2452B91AC9F00B085CF /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9F2442B91AC9F00B085CF /* CreateViewModel.swift */; };
+		CEC119A52BA5B1BC00B79262 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC119A42BA5B1BC00B79262 /* CreateValidator.swift */; };
 		CECB2F182B7799E600B806F8 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB2F172B7799E600B806F8 /* PeopleView.swift */; };
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
@@ -49,6 +50,7 @@
 		CE8CAEB12B6BD5B000292479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEB9F2422B91AC1400B085CF /* NewPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
 		CEB9F2442B91AC9F00B085CF /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
+		CEC119A42BA5B1BC00B79262 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 		CECB2F172B7799E600B806F8 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		CE0BA8C82B6A2F0D009FDA0B /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				CEC119A32BA5B19E00B79262 /* Validator */,
 				CE0BA8D02B6A5DF1009FDA0B /* ViewModels */,
 				CE0BA8CF2B6A5DEC009FDA0B /* Model */,
 				CE0BA8CE2B6A5DE5009FDA0B /* Views */,
@@ -282,6 +285,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		CEC119A32BA5B19E00B79262 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				CEC119A42BA5B1BC00B79262 /* CreateValidator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
 		CECF6A5E2B68C8E900CBB8FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +391,7 @@
 				CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */,
 				CE7440232B84B9950015EAB0 /* NetworkingManager.swift in Sources */,
 				CE3AD4502B75B6B700B9C618 /* StaticJSONMapper.swift in Sources */,
+				CEC119A52BA5B1BC00B79262 /* CreateValidator.swift in Sources */,
 				CE3AD44D2B74B2A000B9C618 /* UsersResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
