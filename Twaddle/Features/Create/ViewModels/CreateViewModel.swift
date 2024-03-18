@@ -13,6 +13,8 @@ final class CreateViewModel: ObservableObject {
     @Published private(set) var error: NetworkingManager.NetworkingError?
     @Published var hasError: Bool = false
 
+    private var validator = CreateValidator()
+
     func create() {
         state = .submitting
 
