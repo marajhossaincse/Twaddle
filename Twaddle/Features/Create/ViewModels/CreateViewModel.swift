@@ -16,28 +16,35 @@ final class CreateViewModel: ObservableObject {
     private var validator = CreateValidator()
 
     func create() {
-        state = .submitting
+        do {
+            try validator.validate(person)
 
-        let encoder = JSONEncoder()
-        encoder.keyEncodingStrategy = .convertToSnakeCase
-        let data = try? encoder.encode(person)
+            state = .submitting
 
-        NetworkingManager
-            .shared
-            .request(
-                methodType: .POST(data: data),
-                "https://reqres.in/api/users?delay=3")
-        { [weak self] res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self?.state = .successful
-                case .failure(let error):
-                    self?.state = .unsuccessful
-                    self?.hasError = true
-                    self?.error = error as? NetworkingManager.NetworkingError
+            let encoder = JSONEncoder()
+            encoder.keyEncodingStrategy = .convertToSnakeCase
+            let data = try? encoder.encode(person)
+
+            NetworkingManager
+                .shared
+                .request(
+                    methodType: .POST(data: data),
+                    "https://reqres.in/api/users?delay=3")
+            {
+                [weak self] res in
+                DispatchQueue.main.async {
+                    switch res {
+                    case .success:
+                        self?.state = .successful
+                    case .failure(let error):
+                        self?.state = .unsuccessful
+                        self?.hasError = true
+                        self?.error = error as? NetworkingManager.NetworkingError
+                    }
                 }
             }
+        } catch {
+            print(error)
         }
     }
 }
