@@ -10,7 +10,7 @@ import Foundation
 final class CreateViewModel: ObservableObject {
     @Published var person = NewPerson()
     @Published private(set) var state: SubmissionState?
-    @Published private(set) var error: NetworkingManager.NetworkingError?
+    @Published private(set) var error: FormError?
     @Published var hasError: Bool = false
 
     private var validator = CreateValidator()
@@ -39,12 +39,17 @@ final class CreateViewModel: ObservableObject {
                     case .failure(let error):
                         self?.state = .unsuccessful
                         self?.hasError = true
-                        self?.error = error as? NetworkingManager.NetworkingError
+                        if let networkingError = error as? NetworkingManager.NetworkingError {
+                            self?.error = .networking(error: networkingError)
+                        }
                     }
                 }
             }
         } catch {
-            print(error)
+            hasError = true
+            if let validationError = error as? CreateValidator.CreateValidatorError {
+                self.error = .validation(error: validationError)
+            }
         }
     }
 }
@@ -54,5 +59,21 @@ extension CreateViewModel {
         case unsuccessful
         case successful
         case submitting
+    }
+}
+
+extension CreateViewModel {
+    enum FormError: LocalizedError {
+        case networking(error: LocalizedError)
+        case validation(error: LocalizedError)
+    }
+}
+
+extension CreateViewModel.FormError {
+    var errorDescription: String? {
+        switch self {
+        case .networking(let err), .validation(let err):
+            return err.errorDescription
+        }
     }
 }
