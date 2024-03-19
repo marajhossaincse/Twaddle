@@ -27,6 +27,7 @@
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
 		CEDA05A32B8DBA7A0077DEE7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */; };
+		CEE4544D2BA90B3100EC4E73 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4544C2BA90B3100EC4E73 /* HapticManager.swift */; };
 		CEF5D90D2BA33B1900F040EE /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5D90C2BA33B1900F040EE /* CheckmarkPopoverView.swift */; };
 		CEFD56A72B7F2F0600C70157 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD56A62B7F2F0600C70157 /* DetailView.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		CEE4544C2BA90B3100EC4E73 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		CEE9B6522B720B470018D002 /* LearningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CEF5D90C2BA33B1900F040EE /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
 		CEFD56A62B7F2F0600C70157 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		CE0BA8C62B6A2EF1009FDA0B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				CEE4544B2BA90A6E00EC4E73 /* Haptic */,
 				CE7440212B84B9770015EAB0 /* API */,
 				CE1EF52D2B7C90A300F3AB95 /* Views */,
 				CE3AD44E2B75B69C00B9C618 /* Mapper */,
@@ -303,6 +306,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		CEE4544B2BA90A6E00EC4E73 /* Haptic */ = {
+			isa = PBXGroup;
+			children = (
+				CEE4544C2BA90B3100EC4E73 /* HapticManager.swift */,
+			);
+			path = Haptic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -381,6 +392,7 @@
 				CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */,
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
+				CEE4544D2BA90B3100EC4E73 /* HapticManager.swift in Sources */,
 				CEB9F2432B91AC1400B085CF /* NewPerson.swift in Sources */,
 				CEF5D90D2BA33B1900F040EE /* CheckmarkPopoverView.swift in Sources */,
 				CEFD56A72B7F2F0600C70157 /* DetailView.swift in Sources */,
