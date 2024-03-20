@@ -8,12 +8,18 @@
 import Foundation
 import UIKit
 
-final class HapticManager {
+private final class HapticManager {
     static let shared = HapticManager()
-    
+
     private let feedback = UINotificationFeedbackGenerator()
-    
+
     private init() {}
-    
-    func trigger(_ notification: UINotificationFeedbackGenerator.FeedbackType) {}
+
+    func trigger(_ notification: UINotificationFeedbackGenerator.FeedbackType) {
+        feedback.notificationOccurred(notification)
+    }
+}
+
+func haptic(_ notification: UINotificationFeedbackGenerator.FeedbackType) {
+    HapticManager.shared.trigger(notification)
 }
