@@ -19,6 +19,7 @@
 		CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F22A5D3C4C009655BD /* Assets.xcassets */; };
 		CE5208F62A5D3C4C009655BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */; };
 		CE71F61F2BAAB8ED00FA8639 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71F61E2BAAB8ED00FA8639 /* SettingsView.swift */; };
+		CE71F6222BAABF3D00FA8639 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71F6212BAABF3D00FA8639 /* UserDefaultKeys.swift */; };
 		CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74401F2B8325D70015EAB0 /* CreateView.swift */; };
 		CE7440232B84B9950015EAB0 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7440222B84B9950015EAB0 /* NetworkingManager.swift */; };
 		CEB9F2432B91AC1400B085CF /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9F2422B91AC1400B085CF /* NewPerson.swift */; };
@@ -48,6 +49,7 @@
 		CE5208F22A5D3C4C009655BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE71F61E2BAAB8ED00FA8639 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE71F6212BAABF3D00FA8639 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		CE74401F2B8325D70015EAB0 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		CE7440222B84B9950015EAB0 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		CE8CAEB12B6BD5B000292479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		CE0BA8C62B6A2EF1009FDA0B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				CE71F6202BAABF2100FA8639 /* UserDefaults */,
 				CEE4544B2BA90A6E00EC4E73 /* Haptic */,
 				CE7440212B84B9770015EAB0 /* API */,
 				CE1EF52D2B7C90A300F3AB95 /* Views */,
@@ -291,6 +294,14 @@
 			path = SettingsView;
 			sourceTree = "<group>";
 		};
+		CE71F6202BAABF2100FA8639 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				CE71F6212BAABF3D00FA8639 /* UserDefaultKeys.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		CE7440212B84B9770015EAB0 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +413,7 @@
 				CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */,
 				CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */,
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
+				CE71F6222BAABF3D00FA8639 /* UserDefaultKeys.swift in Sources */,
 				CE71F61F2BAAB8ED00FA8639 /* SettingsView.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
 				CEE4544D2BA90B3100EC4E73 /* HapticManager.swift in Sources */,
