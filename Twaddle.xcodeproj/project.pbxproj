@@ -18,6 +18,7 @@
 		CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */; };
 		CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F22A5D3C4C009655BD /* Assets.xcassets */; };
 		CE5208F62A5D3C4C009655BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */; };
+		CE71F61F2BAAB8ED00FA8639 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71F61E2BAAB8ED00FA8639 /* SettingsView.swift */; };
 		CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74401F2B8325D70015EAB0 /* CreateView.swift */; };
 		CE7440232B84B9950015EAB0 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7440222B84B9950015EAB0 /* NetworkingManager.swift */; };
 		CEB9F2432B91AC1400B085CF /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9F2422B91AC1400B085CF /* NewPerson.swift */; };
@@ -46,6 +47,7 @@
 		CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleApp.swift; sourceTree = "<group>"; };
 		CE5208F22A5D3C4C009655BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE71F61E2BAAB8ED00FA8639 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CE74401F2B8325D70015EAB0 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		CE7440222B84B9950015EAB0 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		CE8CAEB12B6BD5B000292479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		CE0BA8D42B6A5E20009FDA0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE71F61D2BAAB8BA00FA8639 /* SettingsView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +281,14 @@
 				CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE71F61D2BAAB8BA00FA8639 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				CE71F61E2BAAB8ED00FA8639 /* SettingsView.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 		CE7440212B84B9770015EAB0 /* API */ = {
@@ -391,6 +402,7 @@
 				CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */,
 				CE1EF52C2B7C8FB300F3AB95 /* PersonItemView.swift in Sources */,
 				CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */,
+				CE71F61F2BAAB8ED00FA8639 /* SettingsView.swift in Sources */,
 				CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */,
 				CEE4544D2BA90B3100EC4E73 /* HapticManager.swift in Sources */,
 				CEB9F2432B91AC1400B085CF /* NewPerson.swift in Sources */,
