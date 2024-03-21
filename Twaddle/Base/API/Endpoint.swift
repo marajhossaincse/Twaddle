@@ -26,3 +26,20 @@ extension Endpoint {
         }
     }
 }
+
+extension Endpoint {
+    var url: URL? {
+        var urlComponent = URLComponents()
+        urlComponent.scheme = "https"
+        urlComponent.host = host
+        urlComponent.path = path
+
+        #if DEBUG
+            urlComponent.queryItems = [
+                URLQueryItem(name: "delay", value: "1")
+            ]
+        #endif
+
+        return urlComponent.url
+    }
+}
