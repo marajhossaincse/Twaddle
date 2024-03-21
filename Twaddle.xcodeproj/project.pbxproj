@@ -18,6 +18,7 @@
 		CE5208EF2A5D3C43009655BD /* TwaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */; };
 		CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F22A5D3C4C009655BD /* Assets.xcassets */; };
 		CE5208F62A5D3C4C009655BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */; };
+		CE5535ED2BAC095000B27E86 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5535EC2BAC095000B27E86 /* Endpoint.swift */; };
 		CE71F61F2BAAB8ED00FA8639 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71F61E2BAAB8ED00FA8639 /* SettingsView.swift */; };
 		CE71F6222BAABF3D00FA8639 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71F6212BAABF3D00FA8639 /* UserDefaultKeys.swift */; };
 		CE7440202B8325D70015EAB0 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74401F2B8325D70015EAB0 /* CreateView.swift */; };
@@ -48,6 +49,7 @@
 		CE5208EE2A5D3C43009655BD /* TwaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleApp.swift; sourceTree = "<group>"; };
 		CE5208F22A5D3C4C009655BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5208F52A5D3C4C009655BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE5535EC2BAC095000B27E86 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CE71F61E2BAAB8ED00FA8639 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CE71F6212BAABF3D00FA8639 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		CE74401F2B8325D70015EAB0 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7440222B84B9950015EAB0 /* NetworkingManager.swift */,
+				CE5535EC2BAC095000B27E86 /* Endpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				CE7440232B84B9950015EAB0 /* NetworkingManager.swift in Sources */,
 				CE3AD4502B75B6B700B9C618 /* StaticJSONMapper.swift in Sources */,
 				CEC119A52BA5B1BC00B79262 /* CreateValidator.swift in Sources */,
+				CE5535ED2BAC095000B27E86 /* Endpoint.swift in Sources */,
 				CE3AD44D2B74B2A000B9C618 /* UsersResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
