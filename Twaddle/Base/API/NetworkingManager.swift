@@ -103,13 +103,6 @@ extension NetworkingManager {
     }
 }
 
-extension NetworkingManager {
-    enum MethodType {
-        case GET
-        case POST(data: Data?)
-    }
-}
-
 private extension NetworkingManager {
     func buildRequest(
         from url: URL,
