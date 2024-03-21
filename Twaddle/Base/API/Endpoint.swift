@@ -12,3 +12,17 @@ enum Endpoint {
     case detail(id: Int)
     case create
 }
+
+extension Endpoint {
+    var host: String { "reqres.in" }
+    var path: String {
+        switch self {
+        case .people:
+            return "/api/users"
+        case .detail(let id):
+            return "/api/users/\(id)"
+        case .create:
+            return "/api/users"
+        }
+    }
+}
