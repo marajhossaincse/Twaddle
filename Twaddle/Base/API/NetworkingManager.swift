@@ -13,17 +13,16 @@ final class NetworkingManager {
     private init() {}
 
     func request<T: Codable>(
-        methodType: MethodType = .GET,
-        _ absoluteURL: String,
+        _ endPoint: Endpoint,
         type: T.Type,
         completion: @escaping (Result<T, Error>) -> Void)
     {
-        guard let url = URL(string: absoluteURL) else {
+        guard let url = endPoint.url else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
 
-        let request = buildRequest(from: url, methodType: methodType)
+        let request = buildRequest(from: url, methodType: endPoint.methodType)
 
         let dataTasks = URLSession.shared.dataTask(with: request) { data, response, error in
 
@@ -60,16 +59,15 @@ final class NetworkingManager {
     }
 
     func request(
-        methodType: MethodType = .GET,
-        _ absoluteURL: String,
+        _ endPoint: Endpoint,
         completion: @escaping (Result<Void, Error>) -> Void)
     {
-        guard let url = URL(string: absoluteURL) else {
+        guard let url = endPoint.url else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
 
-        let request = buildRequest(from: url, methodType: methodType)
+        let request = buildRequest(from: url, methodType: endPoint.methodType)
 
         let dataTasks = URLSession.shared.dataTask(with: request) { _, response, error in
 
@@ -106,7 +104,7 @@ extension NetworkingManager {
 private extension NetworkingManager {
     func buildRequest(
         from url: URL,
-        methodType: MethodType) -> URLRequest
+        methodType: Endpoint.MethodType) -> URLRequest
     {
         var request = URLRequest(url: url)
 
