@@ -27,24 +27,21 @@ final class CreateViewModel: ObservableObject {
 
             NetworkingManager
                 .shared
-                .request(
-                    methodType: .POST(data: data),
-                    "https://reqres.in/api/users?delay=3")
-            {
-                [weak self] res in
-                DispatchQueue.main.async {
-                    switch res {
-                    case .success:
-                        self?.state = .successful
-                    case .failure(let error):
-                        self?.state = .unsuccessful
-                        self?.hasError = true
-                        if let networkingError = error as? NetworkingManager.NetworkingError {
-                            self?.error = .networking(error: networkingError)
+                .request(.create(submissionData: data)) {
+                    [weak self] res in
+                    DispatchQueue.main.async {
+                        switch res {
+                        case .success:
+                            self?.state = .successful
+                        case .failure(let error):
+                            self?.state = .unsuccessful
+                            self?.hasError = true
+                            if let networkingError = error as? NetworkingManager.NetworkingError {
+                                self?.error = .networking(error: networkingError)
+                            }
                         }
                     }
                 }
-            }
         } catch {
             hasError = true
             if let validationError = error as? CreateValidator.CreateValidatorError {
