@@ -14,8 +14,7 @@ final class NetworkingManager {
 
     func request<T: Codable>(
         _ endPoint: Endpoint,
-        type: T.Type,
-        completion: @escaping (Result<T, Error>) -> Void)
+        type: T.Type) async
     {
         guard let url = endPoint.url else {
             completion(.failure(NetworkingError.invalidUrl))
