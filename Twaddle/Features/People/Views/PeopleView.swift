@@ -43,13 +43,8 @@ struct PeopleView: View {
                     create
                 }
             }
-            .onAppear {
-                vm.fetchUsers()
-                ////  API call format when using mock json
-//                do {
-//                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersReponse.self)
-//                    users = res.data
-//                } catch {}
+            .task {
+                await vm.fetchUsers()
             }
             .sheet(isPresented: $shouldShowCreate) {
                 CreateView {
@@ -64,7 +59,9 @@ struct PeopleView: View {
                 error: vm.error
             ) {
                 Button("Retry") {
-                    vm.fetchUsers()
+                    Task {
+                        await vm.fetchUsers()
+                    }
                 }
             }
             .overlay {
