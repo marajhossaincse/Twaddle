@@ -14,7 +14,8 @@ final class CreateViewModel: ObservableObject {
     @Published var hasError: Bool = false
 
     private var validator = CreateValidator()
-
+    
+    @MainActor
     func create() async {
         do {
             try validator.validate(person)

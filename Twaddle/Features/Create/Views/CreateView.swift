@@ -65,7 +65,9 @@ private extension CreateView {
 
     var submit: some View {
         Button("Submit") {
-            vm.create()
+            Task {
+                await vm.create()
+            }
         }
     }
 
@@ -78,6 +80,6 @@ private extension CreateView {
 
 struct CreateView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateView{}
+        CreateView {}
     }
 }
