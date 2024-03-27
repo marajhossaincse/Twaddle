@@ -11,9 +11,9 @@ struct PeopleView: View {
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
 
     @StateObject private var vm = PeopleViewModel()
-//    @State private var users: [User] = []
     @State private var shouldShowCreate = false
     @State private var shouldShowSuccess = false
+    @State private var hasAppeared = false
 
     var body: some View {
         NavigationView {
@@ -44,7 +44,10 @@ struct PeopleView: View {
                 }
             }
             .task {
-                await vm.fetchUsers()
+                if !hasAppeared {
+                    await vm.fetchUsers()
+                    hasAppeared = true
+                }
             }
             .sheet(isPresented: $shouldShowCreate) {
                 CreateView {
