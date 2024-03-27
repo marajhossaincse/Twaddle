@@ -109,7 +109,11 @@ private extension PeopleView {
     }
 
     var refresh: some View {
-        Button {} label: {
+        Button {
+            Task{
+                await vm.fetchUsers()
+            }
+        } label: {
             Symbols.refresh
         }
         .disabled(vm.isLoading)
