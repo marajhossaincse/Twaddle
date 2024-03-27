@@ -42,6 +42,10 @@ struct PeopleView: View {
                 ToolbarItem(placement: .primaryAction) {
                     create
                 }
+
+                ToolbarItem(placement: .navigationBarLeading) {
+                    refresh
+                }
             }
             .task {
                 if !hasAppeared {
@@ -100,6 +104,13 @@ private extension PeopleView {
                     .system(.headline, design: .rounded)
                         .bold()
                 )
+        }
+        .disabled(vm.isLoading)
+    }
+
+    var refresh: some View {
+        Button {} label: {
+            Symbols.refresh
         }
         .disabled(vm.isLoading)
     }
