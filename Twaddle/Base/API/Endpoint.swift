@@ -8,7 +8,7 @@
 import Foundation
 
 enum Endpoint {
-    case people
+    case people(page: Int)
     case detail(id: Int)
     case create(submissionData: Data?)
 }
