@@ -14,15 +14,16 @@ final class PeopleViewModel: ObservableObject {
     @Published var hasError = false
 
     private var page = 1
+    private var totalPages: Int?
 
-    var isLoading: Bool{
+    var isLoading: Bool {
         viewState == .loading
     }
-    
-    var isFetching: Bool{
+
+    var isFetching: Bool {
         viewState == .fetching
     }
-    
+
     @MainActor
     func fetchUsers() async {
         viewState = .loading
@@ -34,6 +35,9 @@ final class PeopleViewModel: ObservableObject {
             let response = try await NetworkingManager.shared.request(
                 .people(page: page),
                 type: UsersReponse.self)
+
+            totalPages = response.totalPages
+
             users = response.data
         } catch {
             hasError = true
@@ -47,6 +51,8 @@ final class PeopleViewModel: ObservableObject {
 
     @MainActor
     func nextSetOfUsers() async {
+        guard page != totalPages else { return }
+
         viewState = .fetching
         defer { viewState = .finished }
 
@@ -56,6 +62,9 @@ final class PeopleViewModel: ObservableObject {
             let response = try await NetworkingManager.shared.request(
                 .people(page: page),
                 type: UsersReponse.self)
+
+            totalPages = response.totalPages
+
             users += response.data
         } catch {
             hasError = true
