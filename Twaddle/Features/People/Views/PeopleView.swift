@@ -30,6 +30,11 @@ struct PeopleView: View {
                                     DetailView(userId: user.id)
                                 }, label: {
                                     PersonItemView(user: user)
+                                        .task {
+                                            if vm.hasReachedEnd(of: user) {
+                                                await vm.nextSetOfUsers()
+                                            }
+                                        }
                                 })
                             }
                         }
@@ -110,7 +115,7 @@ private extension PeopleView {
 
     var refresh: some View {
         Button {
-            Task{
+            Task {
                 await vm.fetchUsers()
             }
         } label: {

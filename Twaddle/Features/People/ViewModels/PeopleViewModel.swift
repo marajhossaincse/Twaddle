@@ -13,20 +13,22 @@ final class PeopleViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = false
     @Published var hasError = false
 
+    private var page = 1
+
     @MainActor
     func fetchUsers() async {
-        self.isLoading = true
+        isLoading = true
 
         // resets value of isLoading to false when function completes execution
         defer { isLoading = false }
 
         do {
             let response = try await NetworkingManager.shared.request(
-                .people,
+                .people(page: page),
                 type: UsersReponse.self)
-            self.users = response.data
+            users = response.data
         } catch {
-            self.hasError = true
+            hasError = true
             if let networkingError = error as? NetworkingManager.NetworkingError {
                 self.error = networkingError
             } else {
@@ -34,4 +36,29 @@ final class PeopleViewModel: ObservableObject {
             }
         }
     }
+
+    @MainActor
+    func nextSetOfUsers() async {
+        page += 1
+
+        do {
+            let response = try await NetworkingManager.shared.request(
+                .people(page: page),
+                type: UsersReponse.self)
+            users += response.data
+        } catch {
+            hasError = true
+            if let networkingError = error as? NetworkingManager.NetworkingError {
+                self.error = networkingError
+            } else {
+                self.error = .custom(error: error)
+            }
+        }
+    }
+
+    func hasReachedEnd(of user: User) -> Bool {
+        users.last?.id == user.id
+    }
 }
+
+
