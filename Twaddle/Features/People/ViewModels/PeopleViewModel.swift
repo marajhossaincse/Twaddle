@@ -26,6 +26,7 @@ final class PeopleViewModel: ObservableObject {
 
     @MainActor
     func fetchUsers() async {
+        reset()
         viewState = .loading
 
         // resets value of isLoading to false when function completes execution
@@ -86,5 +87,16 @@ extension PeopleViewModel {
         case fetching
         case loading
         case finished
+    }
+}
+
+private extension PeopleViewModel {
+    func reset() {
+        if viewState == .finished {
+            users.removeAll()
+            page = 1
+            totalPages = nil
+            viewState = nil
+        }
     }
 }

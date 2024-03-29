@@ -40,6 +40,11 @@ struct PeopleView: View {
                         }
                         .padding()
                     }
+                    .overlay(alignment: .bottom) {
+                        if vm.isFetching{
+                            ProgressView()
+                        }
+                    }
                 }
             }
             .navigationTitle("People")
