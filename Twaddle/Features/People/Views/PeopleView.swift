@@ -31,7 +31,7 @@ struct PeopleView: View {
                                 }, label: {
                                     PersonItemView(user: user)
                                         .task {
-                                            if vm.hasReachedEnd(of: user) {
+                                            if vm.hasReachedEnd(of: user) && !vm.isFetching{
                                                 await vm.nextSetOfUsers()
                                             }
                                         }

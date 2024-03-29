@@ -10,17 +10,25 @@ import Foundation
 final class PeopleViewModel: ObservableObject {
     @Published private(set) var users: [User] = []
     @Published private(set) var error: NetworkingManager.NetworkingError?
-    @Published private(set) var isLoading: Bool = false
+    @Published private(set) var viewState: ViewState?
     @Published var hasError = false
 
     private var page = 1
 
+    var isLoading: Bool{
+        viewState == .loading
+    }
+    
+    var isFetching: Bool{
+        viewState == .fetching
+    }
+    
     @MainActor
     func fetchUsers() async {
-        isLoading = true
+        viewState = .loading
 
         // resets value of isLoading to false when function completes execution
-        defer { isLoading = false }
+        defer { viewState = .finished }
 
         do {
             let response = try await NetworkingManager.shared.request(
@@ -39,6 +47,9 @@ final class PeopleViewModel: ObservableObject {
 
     @MainActor
     func nextSetOfUsers() async {
+        viewState = .fetching
+        defer { viewState = .finished }
+
         page += 1
 
         do {
@@ -61,4 +72,10 @@ final class PeopleViewModel: ObservableObject {
     }
 }
 
-
+extension PeopleViewModel {
+    enum ViewState {
+        case fetching
+        case loading
+        case finished
+    }
+}
