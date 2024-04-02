@@ -7,9 +7,12 @@
 
 /*
  To add:
- 
+
  - Tests
-*/
+    -- unit test
+    -- ui test
+ 
+ */
 
 import SwiftUI
 
