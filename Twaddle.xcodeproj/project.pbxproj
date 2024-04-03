@@ -30,10 +30,21 @@
 		CECF6A602B68C90400CBB8FA /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A5F2B68C90400CBB8FA /* Symbols.swift */; };
 		CECF6A622B68D37C00CBB8FA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF6A612B68D37C00CBB8FA /* Theme.swift */; };
 		CEDA05A32B8DBA7A0077DEE7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */; };
+		CEE11B572BBD39720022CA21 /* TwaddleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE11B562BBD39720022CA21 /* TwaddleTests.swift */; };
 		CEE4544D2BA90B3100EC4E73 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4544C2BA90B3100EC4E73 /* HapticManager.swift */; };
 		CEF5D90D2BA33B1900F040EE /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5D90C2BA33B1900F040EE /* CheckmarkPopoverView.swift */; };
 		CEFD56A72B7F2F0600C70157 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD56A62B7F2F0600C70157 /* DetailView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEE11B582BBD39720022CA21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE5208E32A5D3C42009655BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5208EA2A5D3C43009655BD;
+			remoteInfo = Twaddle;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE08860D2B886EBD00D53D49 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
@@ -62,6 +73,8 @@
 		CECF6A5F2B68C90400CBB8FA /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		CECF6A612B68D37C00CBB8FA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CEDA05A22B8DBA7A0077DEE7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		CEE11B542BBD39720022CA21 /* TwaddleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwaddleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE11B562BBD39720022CA21 /* TwaddleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleTests.swift; sourceTree = "<group>"; };
 		CEE4544C2BA90B3100EC4E73 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		CEE9B6522B720B470018D002 /* LearningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CEF5D90C2BA33B1900F040EE /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
@@ -70,6 +83,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE5208E82A5D3C43009655BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE11B512BBD39720022CA21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,6 +274,7 @@
 				CE3AD4442B7360B000B9C618 /* LearningGenerics.playground */,
 				CEE9B6522B720B470018D002 /* LearningCodable.playground */,
 				CE5208ED2A5D3C43009655BD /* Twaddle */,
+				CEE11B552BBD39720022CA21 /* TwaddleTests */,
 				CE5208EC2A5D3C43009655BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -262,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5208EB2A5D3C43009655BD /* Twaddle.app */,
+				CEE11B542BBD39720022CA21 /* TwaddleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,6 +353,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		CEE11B552BBD39720022CA21 /* TwaddleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEE11B562BBD39720022CA21 /* TwaddleTests.swift */,
+			);
+			path = TwaddleTests;
+			sourceTree = "<group>";
+		};
 		CEE4544B2BA90A6E00EC4E73 /* Haptic */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +389,24 @@
 			productReference = CE5208EB2A5D3C43009655BD /* Twaddle.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CEE11B532BBD39720022CA21 /* TwaddleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE11B5C2BBD39720022CA21 /* Build configuration list for PBXNativeTarget "TwaddleTests" */;
+			buildPhases = (
+				CEE11B502BBD39720022CA21 /* Sources */,
+				CEE11B512BBD39720022CA21 /* Frameworks */,
+				CEE11B522BBD39720022CA21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEE11B592BBD39720022CA21 /* PBXTargetDependency */,
+			);
+			name = TwaddleTests;
+			productName = TwaddleTests;
+			productReference = CEE11B542BBD39720022CA21 /* TwaddleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -371,6 +419,10 @@
 				TargetAttributes = {
 					CE5208EA2A5D3C43009655BD = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					CEE11B532BBD39720022CA21 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CE5208EA2A5D3C43009655BD;
 					};
 				};
 			};
@@ -388,6 +440,7 @@
 			projectRoot = "";
 			targets = (
 				CE5208EA2A5D3C43009655BD /* Twaddle */,
+				CEE11B532BBD39720022CA21 /* TwaddleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -401,6 +454,13 @@
 				CE3AD4492B74B0E400B9C618 /* SingleUserData.json in Resources */,
 				CE5208F32A5D3C4C009655BD /* Assets.xcassets in Resources */,
 				CE3AD4472B74B07D00B9C618 /* UsersStaticData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE11B522BBD39720022CA21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +496,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEE11B502BBD39720022CA21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE11B572BBD39720022CA21 /* TwaddleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEE11B592BBD39720022CA21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5208EA2A5D3C43009655BD /* Twaddle */;
+			targetProxy = CEE11B582BBD39720022CA21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CE5208F72A5D3C4C009655BD /* Debug */ = {
@@ -613,6 +689,40 @@
 			};
 			name = Release;
 		};
+		CEE11B5A2BBD39720022CA21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marajhossain.TwaddleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twaddle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Twaddle";
+			};
+			name = Debug;
+		};
+		CEE11B5B2BBD39720022CA21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marajhossain.TwaddleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twaddle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Twaddle";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -630,6 +740,15 @@
 			buildConfigurations = (
 				CE5208FA2A5D3C4C009655BD /* Debug */,
 				CE5208FB2A5D3C4C009655BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE11B5C2BBD39720022CA21 /* Build configuration list for PBXNativeTarget "TwaddleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE11B5A2BBD39720022CA21 /* Debug */,
+				CEE11B5B2BBD39720022CA21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
