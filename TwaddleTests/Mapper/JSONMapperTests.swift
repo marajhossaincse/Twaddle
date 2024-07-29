@@ -11,7 +11,9 @@ import XCTest
 
 class JSONMapperTests: XCTestCase {
     func test_with_valid_json_successfully_decoded() {
-        XCTAssertNoThrow(try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersReponse.self), "Mapper shouldn't throw an error.")
+        XCTAssertNoThrow(try StaticJSONMapper.decode(
+            file: "UsersStaticData",
+            type: UsersReponse.self), "Mapper shouldn't throw an error.")
     }
 
     func test_with_missing_file_error_thrown() {
